@@ -19,7 +19,7 @@ public class BookingClient {
 	public String boxofficeName;
 	public int onePass = 0;
 	public boolean printed = false;
-	public static ArrayList<Integer> clientID = new ArrayList<Integer>();
+	//public static ArrayList<Integer> clientID = new ArrayList<Integer>();
 
 	/*
 	 * @param office maps box office id to number of customers in line
@@ -104,7 +104,7 @@ public class BookingClient {
 
 	public static void main(String[] args) {
 		// initialize theater
-		Theater mainShow = new Theater(3, 5, "Jack Reacher: Never Go Back");
+		Theater mainShow = new Theater(3, 5, "Ouija");
 		// initializing office
 		Map<String, Integer> office = new HashMap<String, Integer>();
 		// adds box offices and clients/office
@@ -121,7 +121,7 @@ public class BookingClient {
 		System.out.println("\n\n\nPrinting Purchase History...");
 		List<Ticket> tLog = bc.mainTheater.getTransactionLog();
 		for (Ticket log : tLog) {
-			log.toString();
+			System.out.println(log.toString());
 		}
 
 	}
