@@ -88,31 +88,32 @@ public class Theater {
 		public  String toString() {
 			// TODO: Implement this method to return a string that resembles a ticket
 			int ticketWidth = 31;
-			
+			String ticket = "";
 			//print top of ticket
 			for(int z =0; z< ticketWidth; z++){
-				System.out.print("-");
+				//System.out.print("-");
+				ticket += "-";
 			}
-			System.out.println("");
+		//	System.out.println("");
+			ticket += "\n";
 		//line 1
 			
 			String tempLine = "| Show: " + this.show;
-			if(tempLine.length() > 31){
-				tempLine = tempLine.substring(0, 27);
-				tempLine = tempLine + "...";
-			}
+		
 			while(tempLine.length() < 30){
 				tempLine += " ";
 			}
 			tempLine += "|";
-			System.out.println(tempLine);
+			ticket += tempLine + "\n";
+			//System.out.println(tempLine);
 		//line 2
 			tempLine = "| Box Office ID: " + this.boxOfficeId;
 			while(tempLine.length() < 30){
 				tempLine += " ";
 			}
 			tempLine += "|";
-			System.out.println(tempLine);
+			ticket += tempLine + "\n";
+			//System.out.println(tempLine);
 			
 		//line 3
 			tempLine = "| Seat: " + this.seat.toString();
@@ -120,20 +121,24 @@ public class Theater {
 				tempLine += " ";
 			}
 			tempLine += "|";
-			System.out.println(tempLine);
+			ticket += tempLine + "\n";
+			//System.out.println(tempLine);
 		//line 4
 			tempLine = "| Client: " + this.client;
 			while(tempLine.length() <30){
 				tempLine += " ";
 			}
 			tempLine += "|";
-			System.out.println(tempLine);
+			ticket += tempLine + "\n";
+			//System.out.println(tempLine);
 			for(int z =0; z< ticketWidth; z++){
-				System.out.print("-");
+				//System.out.print("-");
+				ticket += "-";
 			}
-			System.out.println("");
+			//System.out.println("");
+			ticket +="\n";
 			//print 
-			return null;
+			return ticket;
 		}
 	}
 
@@ -185,7 +190,7 @@ public class Theater {
 	
 			
 			ticketLog.add(ticket);
-			ticket.toString();
+			System.out.println(ticket.toString());
 			if(seat == null){
 				return null;
 			}
